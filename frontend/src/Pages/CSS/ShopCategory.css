@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 80px;
-    column-gap: 20px; /* Add this line to set the column gap */
+    column-gap: 20px;
 }
 .shopcategory-loadmore {
     display: flex;
