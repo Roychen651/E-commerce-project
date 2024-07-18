@@ -38,7 +38,7 @@ import p36_img from "./product_36.png";
 let all_product = [
   {
     id: 1,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p1_img,
     new_price: 50.0,
@@ -46,7 +46,7 @@ let all_product = [
   },
   {
     id: 2,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p2_img,
     new_price: 85.0,
@@ -54,7 +54,7 @@ let all_product = [
   },
   {
     id: 3,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p3_img,
     new_price: 60.0,
@@ -62,7 +62,7 @@ let all_product = [
   },
   {
     id: 4,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p4_img,
     new_price: 100.0,
@@ -70,7 +70,7 @@ let all_product = [
   },
   {
     id: 5,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p5_img,
     new_price: 85.0,
@@ -78,7 +78,7 @@ let all_product = [
   },
   {
     id: 6,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p6_img,
     new_price: 85.0,
@@ -86,7 +86,7 @@ let all_product = [
   },
   {
     id: 7,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p7_img,
     new_price: 85.0,
@@ -94,7 +94,7 @@ let all_product = [
   },
   {
     id: 8,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p8_img,
     new_price: 85.0,
@@ -102,7 +102,7 @@ let all_product = [
   },
   {
     id: 9,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p9_img,
     new_price: 85.0,
@@ -110,7 +110,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p10_img,
     new_price: 85.0,
@@ -118,7 +118,7 @@ let all_product = [
   },
   {
     id: 11,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p11_img,
     new_price: 85.0,
@@ -126,7 +126,7 @@ let all_product = [
   },
   {
     id: 12,
-    name: "חולצת נשים עם שרוולים פרפרים צווארון כפתורים ומכפלת פלפול",
+    name: "חולצה קצרה - נשים עם שרוולים קצרים וצווארון עגול",
     category: "women",
     image: p12_img,
     new_price: 85.0,
@@ -134,7 +134,7 @@ let all_product = [
   },
   {
     id: 13,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p13_img,
     new_price: 85.0,
@@ -142,7 +142,7 @@ let all_product = [
   },
   {
     id: 14,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p14_img,
     new_price: 85.0,
@@ -150,7 +150,7 @@ let all_product = [
   },
   {
     id: 15,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p15_img,
     new_price: 85.0,
@@ -158,7 +158,7 @@ let all_product = [
   },
   {
     id: 16,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p16_img,
     new_price: 85.0,
@@ -166,7 +166,7 @@ let all_product = [
   },
   {
     id: 17,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p17_img,
     new_price: 85.0,
@@ -174,7 +174,7 @@ let all_product = [
   },
   {
     id: 18,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p18_img,
     new_price: 85.0,
@@ -182,7 +182,7 @@ let all_product = [
   },
   {
     id: 19,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p19_img,
     new_price: 85.0,
@@ -190,7 +190,7 @@ let all_product = [
   },
   {
     id: 20,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p20_img,
     new_price: 85.0,
@@ -198,7 +198,7 @@ let all_product = [
   },
   {
     id: 21,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p21_img,
     new_price: 85.0,
@@ -206,7 +206,7 @@ let all_product = [
   },
   {
     id: 22,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p22_img,
     new_price: 85.0,
@@ -214,7 +214,7 @@ let all_product = [
   },
   {
     id: 23,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p23_img,
     new_price: 85.0,
@@ -222,7 +222,7 @@ let all_product = [
   },
   {
     id: 24,
-    name: "מעיל בומבר זיפר ירוק לגברים",
+    name: "מעיל גברים מכיל נוצות בצבע ירוק עם רוכסן",
     category: "men",
     image: p24_img,
     new_price: 85.0,
@@ -230,7 +230,7 @@ let all_product = [
   },
   {
     id: 25,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p25_img,
     new_price: 85.0,
@@ -238,7 +238,7 @@ let all_product = [
   },
   {
     id: 26,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p26_img,
     new_price: 85.0,
@@ -246,7 +246,7 @@ let all_product = [
   },
   {
     id: 27,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p27_img,
     new_price: 85.0,
@@ -254,7 +254,7 @@ let all_product = [
   },
   {
     id: 28,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p28_img,
     new_price: 85.0,
@@ -262,7 +262,7 @@ let all_product = [
   },
   {
     id: 29,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p29_img,
     new_price: 85.0,
@@ -270,7 +270,7 @@ let all_product = [
   },
   {
     id: 30,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p30_img,
     new_price: 85.0,
@@ -278,7 +278,7 @@ let all_product = [
   },
   {
     id: 31,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p31_img,
     new_price: 85.0,
@@ -286,7 +286,7 @@ let all_product = [
   },
   {
     id: 32,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p32_img,
     new_price: 85.0,
@@ -294,7 +294,7 @@ let all_product = [
   },
   {
     id: 33,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p33_img,
     new_price: 85.0,
@@ -302,7 +302,7 @@ let all_product = [
   },
   {
     id: 34,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p34_img,
     new_price: 85.0,
@@ -310,7 +310,7 @@ let all_product = [
   },
   {
     id: 35,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p35_img,
     new_price: 85.0,
@@ -318,7 +318,7 @@ let all_product = [
   },
   {
     id: 36,
-    name: "סווטשירט בצבע כתום עם כובע לילדים",
+    name: "סווטשירט ילדים בצבע כתום עם כובע",
     category: "kid",
     image: p36_img,
     new_price: 85.0,
