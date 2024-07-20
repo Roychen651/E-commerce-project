@@ -7,21 +7,21 @@ import Item from '../Components/Item/Item';
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
 
-  console.log('all_product:', all_product); 
-
   if (!all_product) {
     return <div>Loading...</div>;
   }
 
   return (
     <div className='shop-category'>
-      <img src={props.banner} alt="" />
+      <div className="shopcategory-banner-container">
+        <img className="shopcategory-banner" src={props.banner} alt="Banner" />
+      </div>
       <div className="shopcategory-indexSort">
         <p>
           <span>מציג 1-12</span> מתוך 36 מוצרים
         </p>
         <div className="shopcategory-sort">
-          מיין לפי <img src={dropdown_icon} alt="" />
+          מיין לפי <img src={dropdown_icon} alt="Sort Dropdown" />
         </div>
       </div>
       <div className="shopcategory-products">
@@ -44,7 +44,6 @@ const ShopCategory = (props) => {
       </div>
       <div className="shopcategory-loadmore">
         טען עוד
-        
       </div>
     </div>
   );
