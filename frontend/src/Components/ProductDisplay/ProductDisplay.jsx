@@ -29,11 +29,11 @@ const ProductDisplay = (props) => {
                     <img src={star_icon} alt="" />
                     <img src={star_icon} alt="" />
                     <img src={star_dull_icon} alt="" />
-                    <p>(122)</p>
+                    <p>(195)</p>
                 </div>
                 <div className="productdisplay-right-prices">
-                    <div className="productdisplay-right-price-old">${product.old_price}</div>
-                    <div className="productdisplay-right-price-new">${product.new_price}</div>
+                    <div className="productdisplay-right-price-old">₪{product.old_price}</div>
+                    <div className="productdisplay-right-price-new">₪{product.new_price}</div>
                 </div>
                 <div className="productdisplay-price-description">קלת משקל, בעלת גזרה צמודה, צווארון מעוגל ושרוולים קצרים</div>
                 <div className="productdisplay-right-size">

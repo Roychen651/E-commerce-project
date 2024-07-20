@@ -18,6 +18,7 @@
 .productdisplay-image-list {
     display: flex;
     gap: 10px;
+    justify-content: center
 }
 
 .productdisplay-image-list img {
@@ -113,7 +114,7 @@
 .productdisplay-right-sizes {
     display: flex;
     gap: 10px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .productdisplay-right-sizes div {
@@ -138,8 +139,11 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 50%;
+    display: block;
+    margin: 0 auto; 
 }
+
 
 .productdisplay-right button:hover {
     background: rgb(34, 0, 255);
@@ -153,4 +157,205 @@
 
 .productdisplay-right-category span {
     font-weight: bold;
+}
+
+@media (max-width: 1280px) {
+    .productdisplay {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .productdisplay-image-list img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .productdisplay-main-img {
+        max-width: 350px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 22px;
+    }
+
+    .productdisplay-right-star p {
+        font-size: 12px;
+    }
+
+    .productdisplay-right-price-old,
+    .productdisplay-right-price-new {
+        font-size: 16px;
+    }
+
+    .productdisplay-price-description {
+        font-size: 12px;
+    }
+
+    .productdisplay-right-size h1 {
+        font-size: 16px;
+    }
+
+    .productdisplay-right-sizes div {
+        width: 35px;
+        padding: 8px;
+    }
+
+    .productdisplay-right button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .productdisplay-right-category {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .productdisplay {
+        padding: 15px;
+    }
+
+    .productdisplay-image-list img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .productdisplay-main-img {
+        max-width: 300px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 20px;
+    }
+
+    .productdisplay-right-star p {
+        font-size: 12px;
+    }
+
+    .productdisplay-right-price-old,
+    .productdisplay-right-price-new {
+        font-size: 14px;
+    }
+
+    .productdisplay-price-description {
+        font-size: 12px;
+    }
+
+    .productdisplay-right-size h1 {
+        font-size: 14px;
+    }
+
+    .productdisplay-right-sizes div {
+        width: 30px;
+        padding: 6px;
+    }
+
+    .productdisplay-right button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .productdisplay-right-category {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .productdisplay {
+        padding: 10px;
+    }
+
+    .productdisplay-image-list img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .productdisplay-main-img {
+        max-width: 250px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 18px;
+    }
+
+    .productdisplay-right-star p {
+        font-size: 10px;
+    }
+
+    .productdisplay-right-price-old,
+    .productdisplay-right-price-new {
+        font-size: 12px;
+    }
+
+    .productdisplay-price-description {
+        font-size: 10px;
+    }
+
+    .productdisplay-right-size h1 {
+        font-size: 12px;
+    }
+
+    .productdisplay-right-sizes div {
+        width: 25px;
+        padding: 5px;
+    }
+
+    .productdisplay-right button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .productdisplay-right-category {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .productdisplay {
+        padding: 5px;
+    }
+
+    .productdisplay-image-list img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .productdisplay-main-img {
+        max-width: 200px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 16px;
+    }
+
+    .productdisplay-right-star p {
+        font-size: 8px;
+    }
+
+    .productdisplay-right-price-old,
+    .productdisplay-right-price-new {
+        font-size: 10px;
+    }
+
+    .productdisplay-price-description {
+        font-size: 8px;
+    }
+
+    .productdisplay-right-size h1 {
+        font-size: 10px;
+    }
+
+    .productdisplay-right-sizes div {
+        width: 20px;
+        padding: 4px;
+    }
+
+    .productdisplay-right button {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .productdisplay-right-category {
+        font-size: 8px;
+    }
 }

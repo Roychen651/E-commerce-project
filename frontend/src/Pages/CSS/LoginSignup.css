@@ -79,3 +79,100 @@
 .loginsignup-agree input {
     margin-left: 10px;
 }
+
+@media (max-width: 1280px) {
+    .loginsignup-container {
+        width: 500px;
+        padding: 30px 50px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 24px;
+    }
+
+    .loginsignup-fields input {
+        font-size: 15px;
+    }
+
+    .loginsignup-fields input::placeholder {
+        font-size: 17px;
+    }
+
+    .loginsignup-container button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .loginsignup-container {
+        width: 450px;
+        padding: 25px 40px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 22px;
+    }
+
+    .loginsignup-fields input {
+        font-size: 14px;
+    }
+
+    .loginsignup-fields input::placeholder {
+        font-size: 16px;
+    }
+
+    .loginsignup-container button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .loginsignup-container {
+        width: 400px;
+        padding: 20px 30px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 20px;
+    }
+
+    .loginsignup-fields input {
+        font-size: 13px;
+    }
+
+    .loginsignup-fields input::placeholder {
+        font-size: 15px;
+    }
+
+    .loginsignup-container button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .loginsignup-container {
+        width: 90%;
+        padding: 20px 20px;
+    }
+
+    .loginsignup-container h1 {
+        font-size: 18px;
+    }
+
+    .loginsignup-fields input {
+        font-size: 12px;
+    }
+
+    .loginsignup-fields input::placeholder {
+        font-size: 14px;
+    }
+
+    .loginsignup-container button {
+        font-size: 12px;
+        padding: 7px;
+        width: 50%;
+    }
+}
