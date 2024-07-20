@@ -7,7 +7,7 @@ import Item from '../Components/Item/Item';
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
 
-  console.log('all_product:', all_product); // Add this line to verify the data
+  console.log('all_product:', all_product); 
 
   if (!all_product) {
     return <div>Loading...</div>;
