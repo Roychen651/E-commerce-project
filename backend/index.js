@@ -215,6 +215,29 @@ app.post('/login', async (req, res) => {
     }
 });
 
+
+// Creats the Endpoint for the new collection section fetching from my mongoDB
+
+app.get('/newcollections', async (req, res) => {
+    console.log('Fetching new collections');
+    let products = await Product.find({});
+    let newcollection = products.slice(1).slice(-8);
+    console.log("New Collection Fetched");
+    res.send(newcollection);
+});
+
+// Creates the Endpoint for the women Hot Collection
+
+app.get('/popularinwomen', async (req, res) => {
+    console.log('Fetching popular collections');
+    let products = await Product.find({category:"women"})
+    let popular_in_women = products.slice(0,4);
+    console.log("Popular in women Fetched");
+    res.send(popular_in_women)});
+
+
+
+
 app.listen(port, (error) => {
     if (error) {
         console.log("Error in server setup" + error);

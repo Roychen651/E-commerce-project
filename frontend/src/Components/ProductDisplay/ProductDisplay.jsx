@@ -39,7 +39,7 @@ const ProductDisplay = (props) => {
                     <div className="productdisplay-right-price-old">₪{product.old_price}</div>
                     <div className="productdisplay-right-price-new">₪{product.new_price}</div>
                 </div>
-                <div className="productdisplay-price-description">קלת משקל, בעלת גזרה צמודה, צווארון מעוגל ושרוולים קצרים</div>
+                <div className="productdisplay-price-description">בהנחה !!!</div>
                 <div className="productdisplay-right-size">
                     <h1>בחר/י מידה</h1>
                     <div className="productdisplay-right-sizes">
