@@ -1,3 +1,5 @@
+// © Roy Chen 2024
+
 const port = 4000;
 const express = require('express');
 const app = express();
@@ -27,6 +29,7 @@ const storage = multer.diskStorage({
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
 });
+
 
 const upload = multer({
     storage: storage
@@ -128,9 +131,106 @@ app.get('/getproducts', async (req, res) => {
 
 
 
+// Creating User Schema for user model
+
+const Users = mongoose.model('Users', {
+    name: {
+        type: String,
+    },
+    email: {
+        type: String,
+        unique: true,
+    },
+    password: {
+        type: String,
+        
+    },
+    cartData: {
+        type: Object,
+    },
+    date: {
+        type: Date,
+        default: Date.now
+    },
+});
+
+// Creating Endpoint for user registration
+app.post('/register', async (req, res) => {
+    let check = await Users.findOne({ email: req.body.email });
+    if (check) {
+        return res.status(400).json({
+            success: false,
+            errors: "אימייל כבר קיים במערכת"
+        });
+    }
+
+    let cart = {};
+    for (let i = 0; i < 350; i++) {
+        cart[i] = 0;
+    }
+
+    const user = new Users({
+        name: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+        cartData: cart,
+    });
+
+    await user.save();
+
+    const data = {
+        user: {
+            id: user.id
+        }
+    };
+
+    const authToken = jwt.sign(data, 'secret_ecom');
+    res.json({
+        success: true,
+        authToken
+    });
+});
+
+
+// Creating Endpoint for user login 
+app.post('/login', async (req, res) => {
+    let user = await Users
+        .findOne({ email: req.body.email})
+    if(user){
+        const pass_compare = req.body.password === user.password;
+        if(pass_compare){
+            const data = {
+                user: {
+                    id: user.id
+                }
+            };
+            const authToken = jwt.sign(data,'secret_ecom');
+            res.json({
+                success: true,
+                authToken
+            });
+        }else{
+        res.json({
+            success: false,
+            errors: "הסיסמא שהוקשה שגויה"
+        });
+    }
+    }
+    else{
+        res.json({
+            success: false,
+            errors: "האימייל שהוקש שגוי"
+        });
+    }
+    
+});
+
+
 app.listen(port, (error) => {
     if (error) {
         console.log("Error in server setup" + error);
     }
     console.log("Server is running on port", port);
 });
+
+// © Roy Chen 2024
