@@ -20,6 +20,7 @@ const AddProduct = () => {
     setProductDetails({ ...productDetails, [e.target.name]: e.target.value });
   };
 
+
   // Add product to the database server 
   // and upload the image to the server
   // that I created in the MongoDB
@@ -61,8 +62,20 @@ const AddProduct = () => {
         body: JSON.stringify(product)
       }).then((response) => response.json())
         .then((data) => {
-          data.success ? alert('המוצר התווסף בהצלחה') : alert('שגיאה בהוספת המוצר');
-
+          if(data.success) {
+            alert('המוצר התווסף בהצלחה');
+            // Resetting the form fields
+            setProductDetails({
+              name: '',
+              old_price: '',
+              new_price: '',
+              category: 'women',
+              image: ''
+            });
+            setImage(false);
+          } else {
+            alert('שגיאה בהוספת המוצר');
+          }
         });
     }
 
