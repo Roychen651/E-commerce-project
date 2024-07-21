@@ -8,8 +8,6 @@ const multer = require('multer');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
-const exp = require('constants');
-const { log } = require('console');
 
 app.use(express.json());
 app.use(cors());
@@ -18,6 +16,7 @@ app.use(cors());
 mongoose.connect("mongodb+srv://roychen651:0508815855@cluster0.b2jbnsu.mongodb.net/e-commerce");
 
 // API Creation
+
 app.get('/', (req, res) => {
     res.send("Express App is running");
 });
@@ -29,7 +28,6 @@ const storage = multer.diskStorage({
         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
 });
-
 
 const upload = multer({
     storage: storage
@@ -46,50 +44,48 @@ app.post('/upload', upload.single('product'), (req, res) => {
 
 // schema for product
 const Product = mongoose.model('Product', {
-    id:{
+    id: {
         type: Number,
         required: true
     },
-    name:{
+    name: {
         type: String,
         required: true
     },
-    image:{
+    image: {
         type: String,
         required: true
     },
-    category:{
+    category: {
         type: String,
         required: true
     },
-    new_price:{
+    new_price: {
         type: Number,
         required: true
     },
-    old_price:{
+    old_price: {
         type: Number,
         required: true
     },
-    date:{
+    date: {
         type: Date,
         default: Date.now
     },
-    available:{
+    available: {
         type: Boolean,
         default: true
     },
 });
 
 app.post('/addproduct', async (req, res) => {
-
     let products = await Product.find({});
     let id;
-    if(products.length > 0){
+    if (products.length > 0) {
         let last_product_array = products.slice(-1);
         let last_product = last_product_array[0];
         id = last_product.id + 1;
-    }
-    else{
+    } else {
         id = 1;
     }
 
@@ -100,7 +96,6 @@ app.post('/addproduct', async (req, res) => {
         category: req.body.category,
         new_price: req.body.new_price,
         old_price: req.body.old_price,
-        
     });
     console.log(product);
     await product.save();
@@ -121,7 +116,6 @@ app.post('/deleteproduct', async (req, res) => {
     });
 });
 
-
 // Creating API for getting all products
 app.get('/getproducts', async (req, res) => {
     let products = await Product.find({});
@@ -129,10 +123,7 @@ app.get('/getproducts', async (req, res) => {
     res.send(products);
 });
 
-
-
 // Creating User Schema for user model
-
 const Users = mongoose.model('Users', {
     name: {
         type: String,
@@ -143,7 +134,6 @@ const Users = mongoose.model('Users', {
     },
     password: {
         type: String,
-        
     },
     cartData: {
         type: Object,
@@ -180,51 +170,50 @@ app.post('/register', async (req, res) => {
 
     const data = {
         user: {
-            id: user.id
+            id: user.id,
+            username: user.name
         }
     };
 
     const authToken = jwt.sign(data, 'secret_ecom');
     res.json({
         success: true,
-        authToken
+        authToken,
+        username: user.name
     });
 });
 
-
-// Creating Endpoint for user login 
+// Creating Endpoint for user login
 app.post('/login', async (req, res) => {
-    let user = await Users
-        .findOne({ email: req.body.email})
-    if(user){
+    let user = await Users.findOne({ email: req.body.email });
+    if (user) {
         const pass_compare = req.body.password === user.password;
-        if(pass_compare){
+        if (pass_compare) {
             const data = {
                 user: {
-                    id: user.id
+                    id: user.id,
+                    username: user.name
                 }
             };
-            const authToken = jwt.sign(data,'secret_ecom');
+            const authToken = jwt.sign(data, 'secret_ecom');
             res.json({
                 success: true,
-                authToken
+                authToken,
+                username: user.name
             });
-        }else{
-        res.json({
-            success: false,
-            errors: "הסיסמא שהוקשה שגויה"
-        });
-    }
-    }
-    else{
+        } else {
+            res.json({
+                success: false,
+                errors: "הסיסמא שהוקשה שגויה"
+            });
+        }
+    } else {
         res.json({
             success: false,
             errors: "האימייל שהוקש שגוי"
         });
     }
-    
 });
-
 
 app.listen(port, (error) => {
     if (error) {
