@@ -1,0 +1,147 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    background: white;
+    direction: rtl;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 80%;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: right;
+}
+
+.sidebar-item:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-item p {
+    font-size: 18px;
+    color: #333333;
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .sidebar {
+        max-width: 220px;
+    }
+
+    .sidebar-item {
+        width: 90%;
+        padding: 12px;
+    }
+
+    .sidebar-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .sidebar-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        max-width: 200px;
+    }
+
+    .sidebar-item {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .sidebar-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sidebar-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        max-width: none;
+        padding: 15px 0;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .sidebar-item {
+        width: auto;
+        padding: 8px 15px;
+        margin: 0;
+    }
+
+    .sidebar-item img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sidebar-item p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        max-width: none;
+        padding: 15px 0;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .sidebar-item {
+        width: auto;
+        padding: 6px 10px;
+        margin: 0;
+    }
+
+    .sidebar-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sidebar-item p {
+        font-size: 10px;
+    }
+}
