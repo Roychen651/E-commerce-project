@@ -8,6 +8,10 @@ const ProductDisplay = (props) => {
     const { product } = props;
     const { addToCart } = useContext(ShopContext);
 
+    if (!product) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className='productdisplay'>
             <div className="productdisplay-left">
@@ -47,7 +51,7 @@ const ProductDisplay = (props) => {
                     </div>
                 </div>
                 <button onClick={() => { addToCart(product.id); }}>הוסף לעגלת הקניות</button>
-                <p className='productdisplay-right-category'><span> קטגוריה</span> נשים, חולצה קצרה, שרוולים קצרים </p>
+                <p className='productdisplay-right-category'><span> קטגוריה</span> {product.category}</p>
                 <p className='productdisplay-right-category'><span> תגיות</span> חדש, מודרני </p>
             </div>
         </div>

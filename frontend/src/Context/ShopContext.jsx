@@ -1,18 +1,26 @@
-import React, { createContext, useState, useCallback } from 'react';
-import all_product from '../Components/Assets/all_product'; 
+import React, { createContext, useState, useCallback, useEffect } from 'react';
 
 export const ShopContext = createContext(null);
 
-const getDefaultCart = () => {
-  let cart = {};
-  for (let index = 1; index <= all_product.length; index++) {
-    cart[index] = 0;      
-  }
-  return cart;
-}
-
 const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [all_product, setAll_Product] = useState([]);
+  const [cartItems, setCartItems] = useState({});
+
+  useEffect(() => {
+    fetch('http://localhost:4000/getproducts')
+      .then((response) => response.json())
+      .then((data) => {
+        setAll_Product(data);
+        const initialCart = {};
+        data.forEach(product => {
+          initialCart[product.id] = 0;
+        });
+        setCartItems(initialCart);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, []);
 
   const addToCart = useCallback((itemId) => {
     setCartItems((prevCartItems) => {
@@ -35,10 +43,12 @@ const ShopContextProvider = (props) => {
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo = all_product.find((product) => product.id === Number(item));
-        totalAmount += itemInfo.new_price * cartItems[item];
+        if (itemInfo) {
+          totalAmount += itemInfo.new_price * cartItems[item];
+        }
       }
     }
-    return totalAmount; 
+    return totalAmount;
   }
 
   const getTotalCartItems = () => {
@@ -48,10 +58,10 @@ const ShopContextProvider = (props) => {
         totalItems += cartItems[item];
       }
     }
-    return totalItems; 
-  } 
+    return totalItems;
+  }
 
-  const contextValue = { all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount,getTotalCartItems };
+  const contextValue = { all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, getTotalCartItems };
 
   return (
     <ShopContext.Provider value={contextValue}>
