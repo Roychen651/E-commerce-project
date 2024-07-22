@@ -1,8 +1,14 @@
 import React from 'react';
 import './Hero.css';
-import hero_img from '../Assets/hero_image.png';
 
 const Hero = () => {
+  const handleScrollToNewCollections = () => {
+    const newCollectionsElement = document.getElementById('newCollections');
+    if (newCollectionsElement) {
+      newCollectionsElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='hero' dir='rtl'>
       <div className="hero-content">
@@ -15,10 +21,9 @@ const Hero = () => {
             <p>קולקציה</p>
             <p>לכל אחד</p>
           </div>
-          <button className="hero-latest-btn">קולקצייה אחרונה</button>
-        </div>
-        <div className="hero-left">
-          <img src={hero_img} alt="Hero" />
+          <button className="hero-latest-btn" onClick={handleScrollToNewCollections}>
+            הקולקציה שלנו כאן למטה
+          </button>
         </div>
       </div>
     </div>

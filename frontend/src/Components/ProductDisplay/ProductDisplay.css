@@ -18,7 +18,7 @@
 .productdisplay-image-list {
     display: flex;
     gap: 10px;
-    justify-content: center
+    justify-content: center;
 }
 
 .productdisplay-image-list img {
@@ -127,6 +127,12 @@
     transition: background-color 0.3s;
 }
 
+.productdisplay-right-sizes div.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
 .productdisplay-right-sizes div:hover {
     background-color: #f0f0f0;
 }
@@ -143,7 +149,6 @@
     display: block;
     margin: 0 auto; 
 }
-
 
 .productdisplay-right button:hover {
     background: rgb(34, 0, 255);
