@@ -302,12 +302,6 @@ app.post('/send-receipt', async (req, res) => {
   }
 });
 
-app.listen(port, (error) => {
-    if (error) {
-        console.log("Error in server setup" + error);
-    }
-    console.log("Server is running on port", port);
-});
 
 
 // Creating API for updating products
@@ -341,12 +335,71 @@ app.post('/updateproduct', async (req, res) => {
       });
     }
   });
+
+  // Creating API for updating products
+app.post('/updateproduct', async (req, res) => {
+    const { id, name, image, category, new_price, old_price } = req.body;
+  
+    try {
+      const product = await Product.findOneAndUpdate(
+        { id: id },
+        { name, image, category, new_price, old_price },
+        { new: true }
+      );
+  
+      if (product) {
+        console.log("Product Updated");
+        res.json({
+          success: true,
+          product: product
+        });
+      } else {
+        res.status(404).json({
+          success: false,
+          message: "Product not found"
+        });
+      }
+    } catch (error) {
+      console.error('Error updating product:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Failed to update product'
+      });
+    }
+  });
   
 
+// Endpoint for sending newsletter subscription confirmation
+app.post('/subscribe', async (req, res) => {
+    const { email } = req.body;
 
+ 
+    const mailOptions = {
+        from: 'O&B@gmail.com',
+        to: email,
+        subject: 'תודה על ההצטרפות לניוזלטר',
+        html: `
+            <h1>תודה על ההצטרפות!</h1>
+            <p>נשמח לעדכן אותך במבצעים והחדשות החמות ביותר.</p>
+        `
+    };
 
+    try {
+        // Send the email
+        await transporter.sendMail(mailOptions);
+        res.json({ success: true, message: 'האימייל נשלח בהצלחה' });
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ success: false, message: 'שליחת האימייל נכשלה' });
+    }
+});
 
-
+app.listen(port, (error) => {
+    if (error) {
+        console.log("Error in server setup" + error);
+    }
+    console.log("Server is running on port", port);
+});
 
 
 
