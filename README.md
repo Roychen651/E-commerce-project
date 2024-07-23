@@ -13,11 +13,39 @@ The platform allows users to browse and purchase products, manage their shopping
 - **Responsive Design**: Optimized for all devices, from desktops to mobile phones.
 - **Dynamic Collections**: Fetch and display new and popular products dynamically.
 
+
+## Technologies Used
+
+### Frontend
+
+- React
+- React Router
+- Context API for state management
+- CSS for styling
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB with Mongoose for database
+- JWT for authentication
+- Multer for image uploads
+- Nodemailer for sending emails
+
 ## 📸 Screenshots
 
-![Homepage](./screenshots/homepage.png)
-![Product Page](./screenshots/product_page.png)
-![Cart](./screenshots/cart.png)
+![Screen Recording](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screen%20Recording%202024-07-23%20at%2017.57.02.mp4)
+![Screenshot 1](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.55.05.png)
+![Screenshot 2](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at 17.55.31.png)
+![Screenshot 3](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.55.46.png)
+![Screenshot 4](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.56.03.png)
+![Screenshot 5](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.56.29.png)
+![Screenshot 6](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.57.53.png)
+![Screenshot 7](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.12.png)
+![Screenshot 8](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.18.png)
+![Screenshot 9](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.22.png)
+![Screenshot 10](https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.27.png)
+
 
 ## 🚀 Getting Started
 
