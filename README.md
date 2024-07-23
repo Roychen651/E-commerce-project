@@ -1,42 +1,52 @@
-# E-Commerce Platform
+# 🌐 E-Commerce Platform
 
-Welcome to the **E-Commerce Platform** repository! 
-This project is a fully-functional e-commerce website built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
-The platform allows users to browse and purchase products, manage their shopping cart, register and login, and receive newsletters.
+Welcome to the **E-Commerce Platform** repository! This project is a fully-functional e-commerce website built with the MERN stack (MongoDB, Express.js, React.js, Node.js). The platform allows users to browse and purchase products, manage their shopping cart, register and login, and receive newsletters.
+
+---
 
 ## 🌟 Features
 
-- **User Authentication**: Secure registration and login system with JWT authentication.
-- **Product Management**: Add, delete, and display products with an admin panel.
-- **Shopping Cart**: Add to cart, remove from cart, and view total amount.
-- **Newsletter Subscription**: Subscribe to newsletters and receive email updates.
-- **Responsive Design**: Optimized for all devices, from desktops to mobile phones.
-- **Dynamic Collections**: Fetch and display new and popular products dynamically.
+- **🔒 User Authentication**: Secure registration and login system with JWT authentication.
+- **🛒 Product Management**: Add, delete, and display products with an admin panel.
+- **🛍️ Shopping Cart**: Add to cart, remove from cart, and view total amount.
+- **📧 Newsletter Subscription**: Subscribe to newsletters and receive email updates.
+- **📱 Responsive Design**: Optimized for all devices, from desktops to mobile phones.
+- **✨ Dynamic Collections**: Fetch and display new and popular products dynamically.
 
+---
 
-## Technologies Used
+## 💻 Technologies Used
 
 ### Frontend
 
-- React
-- React Router
-- Context API for state management
-- CSS for styling
+- **⚛️ React**
+- **🌐 React Router**
+- **🛠️ Context API** for state management
+- **🎨 CSS** for styling
 
 ### Backend
 
-- Node.js
-- Express
-- MongoDB with Mongoose for database
-- JWT for authentication
-- Multer for image uploads
-- Nodemailer for sending emails
-
+- **🟢 Node.js**
+- **⚙️ Express**
+- **🍃 MongoDB with Mongoose** for database
+- **🔐 JWT** for authentication
+- **📂 Multer** for image uploads
+- **📧 Nodemailer** for sending emails
+---
 ## 📸 Screenshots
 
-![Homepage](./screenshots/homepage.png)
-![Product Page](./screenshots/product_page.png)
-![Cart](./screenshots/cart.png)
+<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.55.05.png" alt="Screenshot 1" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.55.31.png" alt="Screenshot 2" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.55.46.png" alt="Screenshot 3" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.56.03.png" alt="Screenshot 4" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.56.29.png" alt="Screenshot 5" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.57.53.png" alt="Screenshot 6" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.12.png" alt="Screenshot 7" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.18.png" alt="Screenshot 8" style="width: 80%;">
+  <img src="https://github.com/Roychen651/E-commerce-project/blob/main/Outside%20Sources/Screenshot%202024-07-23%20at%2017.58.22.png" alt="Screenshot 9" style="width: 80%;">
+</div>
+
 
 ## 🚀 Getting Started
 
