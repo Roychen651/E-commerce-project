@@ -234,13 +234,27 @@ app.get('/popularinwomen', async (req, res) => {
     res.send(popular_in_women);
 });
 
+// Enpoint for related product fetching
+app.get('/relatedproducts/:category', async (req, res) => {
+    const { category } = req.params;
+    try {
+      let products = await Product.find({ category });
+      let relatedProducts = products.slice(0, 4); // Adjust this to fetch the correct number of related products
+      res.send(relatedProducts);
+    } catch (error) {
+      console.error('Error fetching related products:', error);
+      res.status(500).send({ error: 'Failed to fetch related products' });
+    }
+  });
+  
+
 // Create a transporter using SMTP
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com', 
   port: 587,
   auth: {
-    user: 'xxx',  // your mail
-    pass: 'xxx'  // your app password of gmail
+    user: 'omersr9@gmail.com',  // your mail
+    pass: 'nqvf tpcl rmen ielw'  // your app password of gmail
   }
 });
 
