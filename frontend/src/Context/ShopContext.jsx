@@ -13,7 +13,7 @@ const ShopContextProvider = (props) => {
         setAll_Product(data);
         const initialCart = {};
         data.forEach(product => {
-          initialCart[`${product.id}-default`] = 0; 
+          initialCart[`${product.id}-default`] = 0; // Default size 'default'
         });
         setCartItems(initialCart);
       })
