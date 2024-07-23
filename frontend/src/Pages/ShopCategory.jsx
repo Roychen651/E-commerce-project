@@ -89,9 +89,6 @@ const ShopCategory = (props) => {
         <button onClick={handleSearch}>חיפוש</button>
       </div>
       <div className="shopcategory-indexSort">
-        <p>
-          <span>מציג 1-{productsToDisplay.length}</span> מתוך {productsToDisplay.length} מוצרים
-        </p>
         <div className="shopcategory-filters">
           <div className="shopcategory-sort" onClick={() => setShowSortOptions(!showSortOptions)}>
             <span>מיין לפי מחיר <img src={dropdown_icon} alt="Sort Dropdown" /></span>

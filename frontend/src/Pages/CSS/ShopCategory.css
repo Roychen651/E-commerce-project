@@ -70,7 +70,8 @@
 .shopcategory-filters {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust the gap between buttons as needed */
+    gap: 10px; 
+    flex-wrap: wrap;
 }
 
 .shopcategory-sort, .shopcategory-color, .shopcategory-type {
@@ -86,13 +87,13 @@
 }
 
 .shopcategory-sort:hover, .shopcategory-color:hover, .shopcategory-type:hover {
-    background-color: #e9ecef;
+    background-color: #efe9ea;
     border-color: #007bff;
     transform: scale(1.05);
 }
 
 .shopcategory-sort:active, .shopcategory-color:active, .shopcategory-type:active {
-    background-color: #e2e6ea;
+    background-color: #eae2e2;
     border-color: #007bff;
     transform: scale(0.98);
 }
@@ -104,7 +105,7 @@
 }
 
 .shopcategory-sort:hover img, .shopcategory-color:hover img, .shopcategory-type:hover img {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 }
 
 .sort-options, .color-options, .type-options {
@@ -128,7 +129,7 @@
 }
 
 .sort-options div:hover, .color-options div:hover, .type-options div:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(114, 114, 114)
 }
 
 .show {
@@ -157,7 +158,6 @@
     font-weight: 500;
 }
 
-/* Responsive Styles */
 @media (max-width: 1280px) {
     .shopcategory-banner {
         width: 100%;
@@ -183,7 +183,9 @@
     }
 
     .shopcategory-filters {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
     .shopcategory-sort, .shopcategory-color, .shopcategory-type {
@@ -238,7 +240,13 @@
         margin: auto;
     }
 
-    .shopcategory-sort {
+    .shopcategory-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .shopcategory-sort, .shopcategory-color, .shopcategory-type {
         padding: 5px 10px;
         font-size: 10px;
     }
@@ -288,6 +296,12 @@
         margin: auto;
     }
 
+    .shopcategory-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
     .shopcategory-sort, .shopcategory-color, .shopcategory-type {
         padding: 5px 10px;
         font-size: 10px;
@@ -311,4 +325,20 @@
         height: 45px;
         font-size: 12px;
     }
+}
+
+.shopcategory-sort.show, .shopcategory-color.show, .shopcategory-type.show {
+    background-color: #0056b3;
+    color: white;
+}
+
+.shopcategory-sort.show img, .shopcategory-color.show img, .shopcategory-type.show img {
+    transform: rotate(0deg);
+}
+
+.sort-options.show, .color-options.show, .type-options.show {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px 4px 0 0;
 }
