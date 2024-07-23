@@ -1,4 +1,4 @@
-// © Roy Chen 2024
+// © Roy Chen & Omer Sruia 2024
 
 const port = 4000;
 const express = require('express');
@@ -8,6 +8,7 @@ const multer = require('multer');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
 
 app.use(express.json());
 app.use(cors());
@@ -215,9 +216,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-
 // Creats the Endpoint for the new collection section fetching from my mongoDB
-
 app.get('/newcollections', async (req, res) => {
     console.log('Fetching new collections');
     let products = await Product.find({});
@@ -227,16 +226,67 @@ app.get('/newcollections', async (req, res) => {
 });
 
 // Creates the Endpoint for the women Hot Collection
-
 app.get('/popularinwomen', async (req, res) => {
     console.log('Fetching popular collections');
     let products = await Product.find({category:"women"})
     let popular_in_women = products.slice(0,4);
     console.log("Popular in women Fetched");
-    res.send(popular_in_women)});
+    res.send(popular_in_women);
+});
 
+// Create a transporter using SMTP
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com', 
+  port: 587,
+  auth: {
+    user: 'omersr9@gmail.com',  
+    pass: 'nqvf tpcl rmen ielw'  
+  }
+});
 
+// Endpoint for sending receipt
+app.post('/send-receipt', async (req, res) => {
+  const { email, items, totalAmount } = req.body;
 
+  // Create the email content
+  const mailOptions = {
+    from: 'O&B@gmail.com', 
+    to: email,
+    subject: 'קבלה עבור הרכישה שלך',
+    html: `
+      <h1>תודה על הרכישה!</h1>
+      <h2>פרטי הקבלה:</h2>
+      <table>
+        <tr>
+          <th>מוצר</th>
+          <th>מידה</th>
+          <th>מחיר</th>
+          <th>כמות</th>
+          <th>סך הכל</th>
+        </tr>
+        ${items.map(item => `
+          <tr>
+            <td>${item.name}</td>
+            <td>${item.size}</td>
+            <td>₪${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>₪${item.total}</td>
+          </tr>
+        `).join('')}
+      </table>
+      <h3>סכום כולל: ₪${totalAmount}</h3>
+    `
+  };
+
+  try {
+    // Send the email
+    await transporter.sendMail(mailOptions);
+    res.json({ success: true, message: 'הקבלה נשלחה בהצלחה' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ success: false, message: 'שליחת הקבלה נכשלה' });
+  }
+});
 
 app.listen(port, (error) => {
     if (error) {
@@ -245,4 +295,46 @@ app.listen(port, (error) => {
     console.log("Server is running on port", port);
 });
 
-// © Roy Chen 2024
+
+// Creating API for updating products
+app.post('/updateproduct', async (req, res) => {
+    const { id, name, image, category, new_price, old_price } = req.body;
+  
+    try {
+      const product = await Product.findOneAndUpdate(
+        { id: id },
+        { name, image, category, new_price, old_price },
+        { new: true }
+      );
+  
+      if (product) {
+        console.log("Product Updated");
+        res.json({
+          success: true,
+          product: product
+        });
+      } else {
+        res.status(404).json({
+          success: false,
+          message: "Product not found"
+        });
+      }
+    } catch (error) {
+      console.error('Error updating product:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Failed to update product'
+      });
+    }
+  });
+  
+
+
+
+
+
+
+
+
+
+// © Roy Chen & Omer Sruia 2024

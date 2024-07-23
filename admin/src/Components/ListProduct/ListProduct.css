@@ -132,3 +132,80 @@
         height: 50px;
     }
 }
+.list-product {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    font-weight: bold;
+  }
+  
+  .listproduct-format-main p,
+  .listproduct-format-main input {
+    margin: 5px;
+  }
+  
+  .listproduct-allproducts {
+    margin-top: 20px;
+  }
+  
+  .listproduct-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+  
+  .listproduct-product-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .listproduct-remove-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .listproduct-format input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+  .listproduct-format button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .listproduct-format button:hover {
+    background-color: #0056b3;
+  }
+  
+  .listproduct-format input[type="number"] {
+    width: 80px;
+  }
+  
+  .listproduct-format .edit-mode {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .listproduct-format .edit-mode input {
+    margin-bottom: 10px;
+  }
+  

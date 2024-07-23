@@ -29,10 +29,14 @@ const Footer = () => {
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icon-container">
-          <img src={instagram_icon} alt="Instagram" />
+          <a href="https://www.instagram.com/roychen.97/" target="_blank" rel="noopener noreferrer">
+            <img src={instagram_icon} alt="Instagram" />
+          </a>
         </div>
         <div className="footer-icon-container">
-          <img src={whatsapp_icon} alt="WhatsApp" />
+          <a href="https://wa.me/+972508815855" target="_blank" rel="noopener noreferrer">
+            <img src={whatsapp_icon} alt="WhatsApp" />
+          </a>
         </div>
       </div>
       <div className="footer-copyright">
